@@ -27,7 +27,7 @@
 <!-- ================= NAV ================= -->
 <header class="nav" id="siteNav">
 	<a href="home.html" class="nav-brand">
-		<img src="WPS Photo.png" alt="M.G Nlong Nig. Ltd logo">
+		<img src="logo-mark.png" alt="M.G Nlong Nig. Ltd logo">
 		<span>M.G Nlong</span>
 	</a>
 
@@ -48,7 +48,7 @@
 <section class="hero" id="home-page-hero-section">
 	<div class="hero-overlay absolute inset-0 z-10"></div>
 	<div class="hero-bg absolute inset-0 z-0"></div>
-	<div class="hero-copy relative z-20 w-full max-w-7xl mx-auto px-6 lg:px-12 py-32 pt-20">
+	<div class="hero-copy relative z-20 w-full max-w-7xl mx-auto px-6 lg:px-12 py-32 pt-20 pb-20">
 		<h1>The best<br>car hire<br>company.</h1>
 		<p class="hero-lede">We offer fast, safe and affordable car transport services to get you where you're going — right on schedule.</p>
 		<div class="anchor-tags-hero-section">
@@ -57,28 +57,6 @@
 		</div>
 	</div>
 
-	<!--<div class="hero-route" aria-hidden="true">
-		<svg viewBox="0 0 360 480" fill="none" xmlns="http://www.w3.org/2000/svg" id="routeSvg">
-			<path id="routePath" d="M60 40 C 220 60, 40 170, 220 210 C 340 235, 60 300, 180 360 C 260 400, 90 420, 300 450"
-				stroke="var(--amber)" stroke-width="3" stroke-linecap="round" stroke-dasharray="10 12"/>
-			<g class="route-stop" style="--d:0s">
-				<circle cx="60" cy="40" r="7"/>
-				<text x="80" y="44">Jos</text>
-			</g>
-			<g class="route-stop" style="--d:.4s">
-				<circle cx="220" cy="210" r="7"/>
-				<text x="240" y="214">Abuja</text>
-			</g>
-			<g class="route-stop" style="--d:.8s">
-				<circle cx="180" cy="360" r="7"/>
-				<text x="200" y="364">Bauchi</text>
-			</g>
-			<g class="route-stop" style="--d:1.2s">
-				<circle cx="300" cy="450" r="7"/>
-				<text x="245" y="472">Gombe</text>
-			</g>
-		</svg>
-	</div>-->
 </section>
 
 <!-- ================= ABOUT ================= -->
@@ -155,13 +133,13 @@
 
 	<div class="video-frame reveal">
 		<video id="fleetVideo" poster="" preload="metadata" playsinline controls>
-			<source src="fleet-showcase.mp4" type="video/mp4">
+			<source src="Advert-video.mp4" type="video/mp4">
 			Your browser does not support embedded video.
 		</video>
 		<button class="video-play" id="videoPlayBtn" aria-label="Play video">
 			<i class="fas fa-play"></i>
 		</button>
-		<p class="video-caption">A quick look at our vehicles, drivers and pickup experience across Jos, Abuja, Bauchi and Gombe.</p>
+		<!--<p class="video-caption">A quick look at our vehicles, drivers and pickup experience across Jos, Abuja, Bauchi and Gombe.</p>-->
 	</div>
 </section>
 
@@ -179,15 +157,17 @@
 
 	<div class="founder-media reveal">
 		<img src="MGNLONG-CEO-PHOTO.jpg" alt="ceo-photo" id="ceo-image">
-		<p style="font-weight: bold;margin-top: 10px;">Moses Godffery Nlong</p>
+		<p style="font-weight: bold;margin-top: 10px;">Nlong Godfrey Moses</p>
 		<p>Founder/CEO</p>
 	
 	</div>
 </section>
 
 <!-- ================= REVIEWS ================= -->
-<section class="our-client-review-section">
-	<div class="section-head">
+<section class="our-client-review-section" style="background:white; position: relative;">
+	<img src="overlay-image-behind-reviews.jpg" style="position:absolute; top:0; left:0; width:100%; opacity:20%; height:100%; object-fit:cover; z-index:0">
+
+	<div class="section-head" style="position:relative; z-index:10">
 		<p class="title">our top client's reviews</p>
 		<h2>Happy clients' reviews</h2>
 	</div>
@@ -197,13 +177,26 @@
 			<div class="user">
 				<i class="fas fa-user"></i>
 				<span>
-					<h4>Seyi Alabi</h4>
-					<p>Bauchi, Nigeria</p>
+					<h4>Institute of Human Virology, Nigeria</h4>
+					<p>Nigeria</p>
 				</span>
 			</div>
 			<p>"The quick reply and secure trip is unmatched and top-notch. I have been a traveller but so far this is the best car ride services company I have had an experience with."</p>
 			<div class="star"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
 		</div>
+
+		<div class="comment-box reveal">
+			<div class="user">
+				<i class="fas fa-user"></i>
+				<span>
+					<h4>APIN Public Health initiative</h4>
+					<p>Jos, Nigeria</p>
+				</span>
+			</div>
+			<p>"Customer service was top-notch. They helped me choose the right car for my trip and everything went perfectly."</p>
+			<div class="star"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+		</div>
+
 		<div class="comment-box reveal">
 			<div class="user">
 				<i class="fas fa-user"></i>
@@ -215,17 +208,7 @@
 			<p>"Smooth process from booking to drop-off. The car was clean and fuel-efficient. Definitely using them again."</p>
 			<div class="star"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
 		</div>
-		<div class="comment-box reveal">
-			<div class="user">
-				<i class="fas fa-user"></i>
-				<span>
-					<h4>Mangai Sule</h4>
-					<p>Jos, Nigeria</p>
-				</span>
-			</div>
-			<p>"Customer service was top-notch. They helped me choose the right car for my trip and everything went perfectly."</p>
-			<div class="star"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
-		</div>
+		
 		<div class="comment-box reveal">
 			<div class="user">
 				<i class="fas fa-user"></i>
@@ -284,7 +267,7 @@
 <footer>
 	<div class="footer-top">
 		<div class="footer-brand">
-			<img src="WPS Photo.png" alt="M.G Nlong Nig. Ltd logo">
+			<img src="logo-mark.png" alt="M.G Nlong Nig. Ltd logo">
 			<p>M.G. Nlong Nig. Limited is a trusted provider of premium services in our areas of competence to meet the needs of our clients with a commitment to quality, flexibility and client satisfaction in a simple, affordable and convenient way.</p>
 			<div class="footer-socials">
 				<a href="tel:+2348061403123" aria-label="Call us"><i class="fas fa-phone"></i></a>
@@ -298,37 +281,21 @@
 				<h4>Jos office</h4>
 				<label>Address</label>
 				<p>No. T28 Akawu Loop, Dadin Kowa, Jos, Plateau State.</p>
-				<label>Phone No.</label>
-				<p>+2348061403123</p>
-				<label>Open hours</label>
-				<p>Mon – Sun</p>
 			</div>
 			<div class="footer-branch">
 				<h4>Abuja branch</h4>
 				<label>Address</label>
 				<p>Plot 465 After Nursing Council off Airport Junction, Jabi, Abuja.</p>
-				<label>Phone No.</label>
-				<p>+2348061403123</p>
-				<label>Open hours</label>
-				<p>Mon – Sun</p>
 			</div>
 			<div class="footer-branch">
 				<h4>Bauchi branch</h4>
 				<label>Address</label>
 				<p>Along Maiduguri Bypass, Bauchi State.</p>
-				<label>Phone No.</label>
-				<p>+2348061403123</p>
-				<label>Open hours</label>
-				<p>Mon – Sun</p>
 			</div>
 			<div class="footer-branch">
 				<h4>Gombe branch</h4>
 				<label>Address</label>
 				<p>Dantiti Plaza, Adjacent Shafa Filling Station, Tumfure, Gombe State.</p>
-				<label>Phone No.</label>
-				<p>+2348061403123</p>
-				<label>Open hours</label>
-				<p>Mon – Sun</p>
 			</div>
 		</div>
 	</div>

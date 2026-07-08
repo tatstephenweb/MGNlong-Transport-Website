@@ -1,0 +1,179 @@
+/* =========================================================
+   BOOK A RIDE — page-specific styles
+   Relies on the design tokens defined in style.css (:root)
+   ========================================================= */
+
+.eyebrow-dark{ color: var(--amber-dim); }
+
+.booking-outer{
+	display: grid;
+	grid-template-columns: 1.15fr .85fr;
+	align-items: stretch;
+	min-height: calc(100vh - 74px);
+	background: white;
+}
+
+/* ---------- Form column ---------- */
+.form-box{
+	padding: 64px 6% 64px 5%;
+	display:flex;
+	flex-direction: column;
+	max-width: 620px;
+}
+.form-box h1{
+	font-size: clamp(32px, 4vw, 46px);
+	margin: 6px 0 10px;
+}
+.form-lede{ color: var(--ink-soft); margin-bottom: 30px; font-size: 15.5px; }
+
+.trip-toggle{
+	display:inline-flex;
+	background: var(--paper);
+	border-radius: 999px;
+	padding: 6px;
+	gap: 4px;
+	margin-bottom: 30px;
+	border: 1px solid var(--line);
+	width: fit-content;
+}
+.trip-toggle button{
+	border: none;
+	background: transparent;
+	padding: 11px 22px;
+	border-radius: 999px;
+	font-family: var(--font-body);
+	font-weight: 700;
+	font-size: 14px;
+	color: var(--ink-soft);
+	cursor: pointer;
+	display:flex;
+	align-items:center;
+	gap: 8px;
+	transition: background .3s var(--ease), color .3s var(--ease);
+}
+.trip-toggle button.is-active{
+	background: var(--night);
+	color: #fff;
+}
+.trip-toggle button:not(.is-active):hover{ color: var(--ink); }
+
+.book-form{
+	display: none;
+	background: var(--paper);
+	padding: 30px;
+}
+.book-form.is-active{ display: block; animation: formIn .45s var(--ease); }
+@keyframes formIn{ from{ opacity:0; transform: translateY(10px); } to{ opacity:1; transform: translateY(0); } }
+
+.form-notice{
+	display:flex; align-items:center; gap:8px;
+	font-size: 13px;
+	color: var(--amber-dim);
+	background: rgba(244,169,59,.12);
+	padding: 10px 14px;
+	border-radius: var(--radius-s);
+	margin-bottom: 22px;
+	font-style: normal;
+}
+
+.field{ margin-bottom: 18px; }
+.field-row{ display:grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.field-row .field{ margin-bottom: 18px; }
+
+.field label{
+	display:flex; align-items:center; gap:8px;
+	font-size: 12.5px;
+	font-family: var(--font-mono);
+	text-transform: uppercase;
+	letter-spacing: .04em;
+	color: var(--ink-soft);
+	margin-bottom: 8px;
+}
+.field label i{ color: var(--amber-dim); width: 14px; text-align:center; }
+
+.field input{
+	width: 100%;
+	padding: 13px 16px;
+	border-radius: var(--radius-s);
+	border: 1.2px solid var(--line);
+	background: white;
+	font-family: var(--font-body);
+	font-size: 14.5px;
+	color: var(--ink);
+	transition: border-color .3s var(--ease), background .3s var(--ease), box-shadow .3s var(--ease);
+}
+.field input::placeholder{ color: #9297A1; }
+.field input:focus{
+	border-color: var(--amber);
+	background: var(--paper);
+	box-shadow: 0 0 0 4px rgba(244,169,59,.14);
+	outline: none;
+}
+
+.book-submit{
+	width: 100%;
+	margin-top: 8px;
+	border: none;
+	cursor: pointer;
+}
+
+/* ---------- Banner column ---------- */
+.img-banner-box{
+	position: relative;
+	overflow: hidden;
+	min-height: 320px;
+}
+.img-banner-box img{
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	position: absolute;
+	inset: 0;
+}
+.img-banner-box::after{
+	content:"";
+	position:absolute; inset:0;
+	background: linear-gradient(200deg, rgba(18,21,28,.05) 20%, rgba(18,21,28,.75) 100%);
+}
+.banner-badge{
+	position: absolute;
+	left: 26px;
+	bottom: 26px;
+	z-index: 2;
+	display:flex;
+	align-items:center;
+	gap: 14px;
+	background: rgba(18,21,28,.55);
+	backdrop-filter: blur(10px);
+	-webkit-backdrop-filter: blur(10px);
+	border: 1px solid var(--line-dark);
+	border-radius: var(--radius-m);
+	padding: 14px 18px;
+	color: #fff;
+}
+.banner-badge i{
+	color: var(--amber);
+	font-size: 20px;
+	background: rgba(244,169,59,.15);
+	padding: 12px;
+	border-radius: 50%;
+}
+.banner-badge strong{ display:block; font-size: 14.5px; }
+.banner-badge span{ display:block; font-size: 12px; color: #C7CAD1; font-family: var(--font-mono); margin-top:2px; }
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+@media (max-width: 980px){
+	.booking-outer{ grid-template-columns: 1fr; min-height: auto; }
+	.form-box{ max-width: none; padding: 44px 6%; }
+	.img-banner-box{ min-height: 260px; order: -1; }
+	.field-row{ grid-template-columns: 1fr; }
+}
+
+@media (max-width: 480px){
+	.trip-toggle{ width: 100%; }
+	.trip-toggle button{ flex:1; justify-content:center; padding: 11px 10px; font-size: 13px; }
+	.form-box{ padding: 34px 5%; }
+	.book-form{ padding: 22px; }
+}
